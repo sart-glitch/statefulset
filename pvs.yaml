@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql1
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: gp3-sc
+  capacity:
+    storage: 5Gi
+  hostPath:
+    path: /mysql1
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql2
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: gp3-sc
+  capacity:
+    storage: 5Gi
+  hostPath:
+    path: /mysql2
